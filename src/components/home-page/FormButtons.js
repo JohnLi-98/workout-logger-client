@@ -9,22 +9,15 @@ const FormButtons = ({ modalChange, formId }) => {
   return (
     <div className={classes.buttonsDiv}>
       <Button
-        type="submit"
-        form={formId}
-        variant="outlined"
-        className={classes.addButton}
-      >
-        Log Set
-      </Button>
-
-      <Button
-        variant="outlined"
-        className={classes.cancelButton}
         onClick={() => {
           modalChange();
         }}
+        color="secondary"
       >
         Cancel
+      </Button>
+      <Button type="submit" form={formId} color="primary">
+        Confirm
       </Button>
     </div>
   );

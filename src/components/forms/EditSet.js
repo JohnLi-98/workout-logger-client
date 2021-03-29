@@ -3,7 +3,7 @@ import { Button, DialogActions, Grid, TextField } from "@material-ui/core";
 import { useMutation } from "@apollo/client";
 import { useSnackbar } from "notistack";
 
-import styles from "../logs-pages/styles";
+import styles from "./styles";
 import { useForm } from "../../util/form-hooks";
 import {
   EDIT_SET,
@@ -103,8 +103,8 @@ const EditSetForm = ({ workoutId, exerciseId, set, handleClose }) => {
   return (
     <>
       <form onSubmit={onSubmit} id="editSetForm" noValidate autoComplete="off">
-        <Grid container className={classes.formInput}>
-          <Grid item xs={6} className={classes.gridLeft}>
+        <Grid container className={classes.homeFormInput}>
+          <Grid item xs={6} className={classes.paddingLeft}>
             <TextField
               id="weight"
               name="weight"
@@ -120,7 +120,7 @@ const EditSetForm = ({ workoutId, exerciseId, set, handleClose }) => {
             />
           </Grid>
 
-          <Grid item xs={6} className={classes.gridRight}>
+          <Grid item xs={6} className={classes.paddingRight}>
             <TextField
               id="reps"
               name="reps"
@@ -146,7 +146,7 @@ const EditSetForm = ({ workoutId, exerciseId, set, handleClose }) => {
           fullWidth
           multiline={true}
           rows="4"
-          className={classes.formInput}
+          className={classes.homeFormInput}
           value={values.notes}
           onChange={onChange}
         />
